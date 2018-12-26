@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pagination .page{
+            display: inline-block;
+            padding:5px;
+            background-color: bisque;
+            margin: 3px;
+        }
+        .pagination .page.active{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div><h3>用户列表</h3></div>
+    <div>
+        {% for row in list %}
+            <ul>{{ row }}</ul>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        {{ pg_num }}
+    </div>
+{#    {{ pg_num|safe }}#}
+
+</body>
+</html>

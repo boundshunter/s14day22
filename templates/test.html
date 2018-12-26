@@ -1,0 +1,21 @@
+{% load simple %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <h1>{{ name|lower }}</h1>
+    <h3>{% test_simple %}</h3>
+{#    1,2,3为函数需要传入的参数#}
+    <h3>{% test_simple_args 1 2 3 %}</h3>
+
+    <h2>{{ "abc"|test_filter:"dd" }}</h2>
+    <h1>{% if "abc"|test_filter:"dd" %}
+        {% endif %}
+    </h1>
+
+</body>
+</html>
